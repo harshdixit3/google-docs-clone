@@ -9,7 +9,7 @@ const Page = () => {
         <div>
             <Header>
                <div className="flex w-fit items-center justify-center gap-2">
-                   <p className="document-title">This is a fake document</p>
+                   <p className="document-title">share</p>
                </div>
                 <SignedOut>
                     <SignInButton />
