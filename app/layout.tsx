@@ -4,6 +4,7 @@ import "./globals.css";
 import React from "react";
 import {ClerkProvider} from "@clerk/nextjs";
 import {dark} from "@clerk/themes";
+import Provider from "@/app/Provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -33,7 +34,11 @@ export default function RootLayout({
           }
       >
         <html lang="en" suppressHydrationWarning>
-        <body className={fontSans.className}>{children}</body>
+        <body className={fontSans.className}>
+        <Provider>
+            {children}
+        </Provider>
+        </body>
         </html>
       </ClerkProvider>
   );
